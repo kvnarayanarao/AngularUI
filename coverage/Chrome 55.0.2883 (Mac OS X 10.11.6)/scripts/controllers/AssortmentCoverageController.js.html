@@ -1,0 +1,1058 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for scripts/controllers/AssortmentCoverageController.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">scripts/controllers/</a> AssortmentCoverageController.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">1.54% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>3/195</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/52</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">4% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>1/25</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">1.54% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>3/195</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function() {
+    angular.module("ABC").controller("AssortmentCoverageController", ['config', '$scope', '$rootScope', 'chartHandlerService', '$route', '$routeParams', 'filterService', 'requestHandlers', 'filterChangeHandler', 'Crossfilter',
+<span class="fstat-no" title="function not covered" >        function(config, $scope, $rootScope, chartHandler, $route, $routeParams, filterService, requestHandlers, filterChangeHandler, Crossfilter) {</span>
+<span class="cstat-no" title="statement not covered" >            $scope.loadingFilter = true;</span>
+<span class="cstat-no" title="statement not covered" >            $scope.loadingImage = true;</span>
+<span class="cstat-no" title="statement not covered" >            $scope.counter = 0;</span>
+<span class="cstat-no" title="statement not covered" >            $scope.ChartTableLoadingTimer = { chart: false, table: false };</span>
+<span class="cstat-no" title="statement not covered" >            $scope.loadingSym = false;</span>
+<span class="cstat-no" title="statement not covered" >            $scope.loadingSym1 = false;</span>
+<span class="cstat-no" title="statement not covered" >            $scope.loadingSym2 = true;</span>
+<span class="cstat-no" title="statement not covered" >            filterChangeHandler.filterErrorSet($scope);</span>
+<span class="cstat-no" title="statement not covered" >            $scope.filterService = filterService.data;</span>
+<span class="cstat-no" title="statement not covered" >            $scope.onLoadText = "Please select filters and click 'Apply' button to load Data.";</span>
+<span class="cstat-no" title="statement not covered" >            $scope.pageName = config.assortmentCoverage.pageName;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            $scope.firstPer = 50;</span>
+<span class="cstat-no" title="statement not covered" >            $scope.secondPer = 50;</span>
+<span class="cstat-no" title="statement not covered" >            $scope.arrowSymbolColumnNum = 14;</span>
+<span class="cstat-no" title="statement not covered" >            $scope.dowArrowFlag = true;</span>
+<span class="cstat-no" title="statement not covered" >            $scope.responseBody = {};</span>
+<span class="cstat-no" title="statement not covered" >            $scope.filterParam1 = {};</span>
+<span class="cstat-no" title="statement not covered" >            $scope.disableReset = true;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            $scope.hideColumns = config.assortmentCoverage.hideColumns;</span>
+<span class="cstat-no" title="statement not covered" >            $scope.showCategoryLbl = "";</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            if (!$scope.filterService.isSet || $scope.filterService.mdlCategory.category.trim() == "ALL")</span>
+<span class="cstat-no" title="statement not covered" >                $scope.disSubCat = true;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            $scope.paramForRowExpand = {};</span>
+<span class="cstat-no" title="statement not covered" >            $scope.clickedRow = null;</span>
+<span class="cstat-no" title="statement not covered" >            $scope.clickedRowsArray = {};</span>
+<span class="cstat-no" title="statement not covered" >            $scope.showTableFlag = false;</span>
+<span class="cstat-no" title="statement not covered" >            $scope.chartTypeBarMap = 'Map';</span>
+<span class="cstat-no" title="statement not covered" >            var columnName = "Market";</span>
+<span class="cstat-no" title="statement not covered" >            var sortDescending = true;</span>
+<span class="cstat-no" title="statement not covered" >            var tmRankValues = [];</span>
+<span class="cstat-no" title="statement not covered" >            var chartData, chartDataFiltered;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            $scope.checkChange = <span class="fstat-no" title="function not covered" >function(param) {</span></span>
+<span class="cstat-no" title="statement not covered" >                    $scope.firstPer = param;</span>
+<span class="cstat-no" title="statement not covered" >                    $scope.secondPer = 100 - Number(param);</span>
+<span class="cstat-no" title="statement not covered" >                    var newValuePercentage = param / 100;</span>
+<span class="cstat-no" title="statement not covered" >                    $scope.dataTable = chartHandler.performanceMixCalculation(newValuePercentage, $scope.dataTable);</span>
+<span class="cstat-no" title="statement not covered" >                    $scope.originalDataTable = angular.copy($scope.dataTable);</span>
+<span class="cstat-no" title="statement not covered" >                    $scope.originalToFilter = angular.copy($scope.dataTable);</span>
+                }
+                // Filter Loading on Page Load Starts
+<span class="cstat-no" title="statement not covered" >            if (!$scope.filterService.isSet) {</span>
+<span class="cstat-no" title="statement not covered" >                filterChangeHandler.filtersDataPopulation($scope);</span>
+            } else {
+<span class="cstat-no" title="statement not covered" >                filterChangeHandler.renderDMAData($scope);</span>
+            }
+            // Filter Loading on Page Load Ends
+&nbsp;
+            /**** Filter Change Start  ***/
+<span class="cstat-no" title="statement not covered" >            $scope.filterChange = <span class="fstat-no" title="function not covered" >function(selectedFilter, selectedValue) {</span></span>
+<span class="cstat-no" title="statement not covered" >                $scope.counter++;</span>
+<span class="cstat-no" title="statement not covered" >                $scope.filterService.filterData.unfilterAll();</span>
+<span class="cstat-no" title="statement not covered" >                $scope.loadingFilter = true;</span>
+<span class="cstat-no" title="statement not covered" >                $scope.loadingImage = true;</span>
+<span class="cstat-no" title="statement not covered" >                $scope.counter = 0;</span>
+<span class="cstat-no" title="statement not covered" >                $scope.filterError = {</span>
+                    'period': 0,
+                    'department': 0,
+                    'categoryGroup': 0,
+                    'category': 0,
+                    'subCategory': 0,
+                    'brandNames': 0,
+                    'geography': 0
+                };
+<span class="cstat-no" title="statement not covered" >                filterChangeHandler.filterChange(selectedFilter, selectedValue, $scope);</span>
+            }
+&nbsp;
+&nbsp;
+            /**** Filter Change End  ***/
+<span class="cstat-no" title="statement not covered" >            $scope.renderGraph = <span class="fstat-no" title="function not covered" >function(paramObj, $scope) {</span></span>
+<span class="cstat-no" title="statement not covered" >                $scope.loadingSym = true;</span>
+<span class="cstat-no" title="statement not covered" >                $scope.firstPer = 50;</span>
+<span class="cstat-no" title="statement not covered" >                $scope.secondPer = 50;</span>
+<span class="cstat-no" title="statement not covered" >                var paramObj1 = angular.copy(paramObj);</span>
+<span class="cstat-no" title="statement not covered" >                delete paramObj1['totalSales'];</span>
+<span class="cstat-no" title="statement not covered" >                delete paramObj1['totalUnitQuantity'];</span>
+<span class="cstat-no" title="statement not covered" >                var assortmentCoverageOperations = paramObj1.hasOwnProperty('geography') ? config.assortmentCoverage.assortmentCurve : config.assortmentCoverage.assortmentWithNational;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                requestHandlers.requestAjaxService(assortmentCoverageOperations, paramObj1).then(</span>
+<span class="fstat-no" title="function not covered" >                    function(successResponse) {</span>
+<span class="cstat-no" title="statement not covered" >                        if (successResponse.status == 200 &amp;&amp; successResponse.data != "") {</span>
+<span class="cstat-no" title="statement not covered" >                            chartData = chartHandler.parseAssortmentTabResponse(successResponse.data);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                            chartDataFiltered = angular.copy(chartData);</span>
+<span class="cstat-no" title="statement not covered" >                            if (chartData.rows.length &lt;= 0) {</span>
+<span class="cstat-no" title="statement not covered" >                                $scope.errorModalWindow = true;</span>
+                            } else {
+<span class="cstat-no" title="statement not covered" >                                tmRankValues = d3.extent(chartData.rows, <span class="fstat-no" title="function not covered" >function(d) {</span></span>
+<span class="cstat-no" title="statement not covered" >                                    return Number(d[6]);</span>
+                                });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                                $scope.slider = {</span>
+                                    theoreticalMin: tmRankValues[0],
+                                    theoreticalMax: tmRankValues[1],
+                                    min: tmRankValues[0],
+                                    max: tmRankValues[1]
+                                };
+<span class="cstat-no" title="statement not covered" >                                chartHandler.showLineWithFocalPointChart(d3.select("#assortments"), "", chartData, false);</span>
+                            }
+&nbsp;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                            $scope.loadingSym = false;</span>
+<span class="cstat-no" title="statement not covered" >                            $scope.ChartTableLoadingTimer.chart = false;</span>
+<span class="cstat-no" title="statement not covered" >                            $scope.disableReset = false;</span>
+<span class="cstat-no" title="statement not covered" >                            $rootScope.isSnapShotEnabled = false;</span>
+                        } else {
+<span class="cstat-no" title="statement not covered" >                            requestHandlers.erorHandler(false, $scope);</span>
+                        }
+                    },
+<span class="fstat-no" title="function not covered" >                    function(error) {</span>
+<span class="cstat-no" title="statement not covered" >                        requestHandlers.erorHandler(error, $scope);</span>
+                    });
+            };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            $scope.redrawAssort = <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >                var validRow = true;</span>
+<span class="cstat-no" title="statement not covered" >                chartDataFiltered.rows = _.filter(chartData.rows, <span class="fstat-no" title="function not covered" >function(currRow) {</span></span>
+<span class="cstat-no" title="statement not covered" >                    if (Number(currRow[6]) &gt;= $scope.slider.min &amp;&amp; Number(currRow[6]) &lt;= $scope.slider.max) {</span>
+<span class="cstat-no" title="statement not covered" >                        validRow = true;</span>
+                    } else {
+<span class="cstat-no" title="statement not covered" >                        validRow = false;</span>
+                    }
+<span class="cstat-no" title="statement not covered" >                    return validRow;</span>
+                });
+<span class="cstat-no" title="statement not covered" >                chartHandler.showLineWithFocalPointChart(d3.select("#assortments"), "", chartDataFiltered, false);</span>
+            }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            $scope.renderTableData = <span class="fstat-no" title="function not covered" >function(paramObj, $scope) {</span></span>
+<span class="cstat-no" title="statement not covered" >                $scope.loadingSym1 = true;</span>
+<span class="cstat-no" title="statement not covered" >                $scope.showTableFlag = false;</span>
+<span class="cstat-no" title="statement not covered" >                paramObj['totalSales'] = 50;</span>
+<span class="cstat-no" title="statement not covered" >                paramObj['totalUnitQuantity'] = 50;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                requestHandlers.requestAjaxService(config.assortmentCoverage.topLevelTable, paramObj).then(</span>
+&nbsp;
+<span class="fstat-no" title="function not covered" >                    function(successResponse) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                        if (successResponse.status == 200 &amp;&amp; successResponse.data != "") {</span>
+<span class="cstat-no" title="statement not covered" >                            var successResponse = chartHandler.parseGraphResponse(successResponse.data);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                            chartHandler.showTable(successResponse, $scope);</span>
+<span class="cstat-no" title="statement not covered" >                            $scope.loadingSym1 = false;</span>
+<span class="cstat-no" title="statement not covered" >                            $scope.showTableFlag = true;</span>
+<span class="cstat-no" title="statement not covered" >                            $scope.ChartTableLoadingTimer.table = false;</span>
+<span class="cstat-no" title="statement not covered" >                            $rootScope.isExportButtonEnabled = false;</span>
+                        } else {
+<span class="cstat-no" title="statement not covered" >                            requestHandlers.erorHandler(false, $scope);</span>
+                        }
+                    },
+<span class="fstat-no" title="function not covered" >                    function(error) {</span>
+<span class="cstat-no" title="statement not covered" >                        requestHandlers.erorHandler(error, $scope);</span>
+                    });
+&nbsp;
+            };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            $scope.$watch("filterService.controlBrands", <span class="fstat-no" title="function not covered" >function(newValue, oldValue) {</span></span>
+<span class="cstat-no" title="statement not covered" >                if (newValue) {</span>
+<span class="cstat-no" title="statement not covered" >                    $scope.filterService.controlBrands = newValue;</span>
+                }
+            });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            $scope.$watch("filterService.clubPacks", <span class="fstat-no" title="function not covered" >function(newValue, oldValue) {</span></span>
+<span class="cstat-no" title="statement not covered" >                if (newValue) {</span>
+<span class="cstat-no" title="statement not covered" >                    $scope.filterService.clubPacks = newValue;</span>
+                }
+            });
+&nbsp;
+            /** Apply Button Click Event Start **/
+<span class="cstat-no" title="statement not covered" >            $scope.applyFilters = <span class="fstat-no" title="function not covered" >function() {</span></span>
+                //jQuery('#loadingFilter').addClass('noLoadingIcon');
+<span class="cstat-no" title="statement not covered" >                $rootScope.serverError = false;</span>
+<span class="cstat-no" title="statement not covered" >                var svg = d3.select("svg#assortments");</span>
+<span class="cstat-no" title="statement not covered" >                svg.selectAll("*").remove();</span>
+<span class="cstat-no" title="statement not covered" >                $scope.onLoadText = "";</span>
+<span class="cstat-no" title="statement not covered" >                $('.d3-tip').hide();</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                $scope.loadingSym = true;</span>
+<span class="cstat-no" title="statement not covered" >                $scope.loadingFilter = true;</span>
+<span class="cstat-no" title="statement not covered" >                $scope.loadingImage = false;</span>
+<span class="cstat-no" title="statement not covered" >                $scope.errorModalWindow = false;</span>
+&nbsp;
+                //$scope.ChartTableLoadingTimer.chart = true;
+                //$scope.ChartTableLoadingTimer.table = true;
+<span class="cstat-no" title="statement not covered" >                $scope.showCategoryLbl = $scope.filterService.mdlCategoryGroup.category_group + " / " + $scope.filterService.mdlCategory.category + " / " + $scope.filterService.mdlSubCategory.subcategory;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                var filterParam1 = {};</span>
+<span class="cstat-no" title="statement not covered" >                filterParam1['brandHierarchy'] = $scope.filterService.mdlBrandHier.val;</span>
+<span class="cstat-no" title="statement not covered" >                filterParam1['period'] = "'" + $scope.filterService.mdlPeriod.period + "'";</span>
+<span class="cstat-no" title="statement not covered" >                filterParam1['department'] = "'" + $scope.filterService.mdlDepartment.department + "'";</span>
+<span class="cstat-no" title="statement not covered" >                filterParam1['categoryGroup'] = "'" + $scope.filterService.mdlCategoryGroup.category_group + "'";</span>
+<span class="cstat-no" title="statement not covered" >                if ($scope.filterService.mdlCategory.category != 'ALL') {</span>
+<span class="cstat-no" title="statement not covered" >                    filterParam1['category'] = "'" + $scope.filterService.mdlCategory.category + "'";</span>
+                }
+<span class="cstat-no" title="statement not covered" >                if ($scope.filterService.mdlSubCategory.subcategory != 'ALL') {</span>
+<span class="cstat-no" title="statement not covered" >                    filterParam1['subCategory'] = "'" + $scope.filterService.mdlSubCategory.subcategory + "'";</span>
+                }
+<span class="cstat-no" title="statement not covered" >                if ($scope.filterService.controlBrands) {</span>
+<span class="cstat-no" title="statement not covered" >                    filterParam1['controlBrand'] = "'" + "CTL BR" + "'";</span>
+                }
+<span class="cstat-no" title="statement not covered" >                if ($scope.filterService.clubPacks) {</span>
+<span class="cstat-no" title="statement not covered" >                    filterParam1['clubPack'] = "'" + "Y" + "'";</span>
+                }
+<span class="cstat-no" title="statement not covered" >                angular.copy(filterParam1, $scope.paramForRowExpand);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                if ($scope.filterService.mdlGeo.dma != 'NATIONAL') {</span>
+<span class="cstat-no" title="statement not covered" >                    filterParam1['geography'] = "'" + $scope.filterService.mdlGeo.dma + "'";</span>
+                }
+<span class="cstat-no" title="statement not covered" >                $scope.renderGraph(filterParam1, $scope);</span>
+<span class="cstat-no" title="statement not covered" >                $scope.renderTableData(filterParam1, $scope);</span>
+&nbsp;
+                // $scope.ChartTableLoadingTimer.chart = false;
+                //$scope.ChartTableLoadingTimer.table = false;
+&nbsp;
+                //if ($scope.counter &lt;= 0) {
+<span class="cstat-no" title="statement not covered" >                $scope.loadingFilter = false;</span>
+<span class="cstat-no" title="statement not covered" >                $scope.loadingImage = false;</span>
+<span class="cstat-no" title="statement not covered" >                $scope.counter = 0;</span>
+                //}
+            };
+            /** Apply Button Click Event End **/
+&nbsp;
+            /** Filter Handler Overlay Start **/
+            //    $scope.$watch("[ChartTableLoadingTimer.chart,ChartTableLoadingTimer.table,counter]", function (newValue, oldValue) {
+            //         if (newValue[0] == false &amp;&amp; newValue[1] == false &amp;&amp; newValue[2] &lt;= 0) {
+            //             $scope.loadingFilter = false;
+            //             $scope.loadingImage = false;
+            //             $scope.counter = 0;
+            //         }
+            //     });
+&nbsp;
+            /** Filter Handler Overlay End **/
+<span class="cstat-no" title="statement not covered" >            $scope.filterService.clickedRowsArray1 = [];</span>
+<span class="cstat-no" title="statement not covered" >            $scope.filterService.childRowsData = {};</span>
+<span class="cstat-no" title="statement not covered" >            var columnDataHeaders = [];</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            $scope.hoverIn = <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >                $('.tooltip').css('display', 'block');</span>
+            };
+<span class="cstat-no" title="statement not covered" >            $scope.hoverOut = <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >                $('.tooltip').css('display', 'none');</span>
+            };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            $scope.rowClick = <span class="fstat-no" title="function not covered" >function(param, currentEvent) {</span></span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                if (param['Market'] != 'National') {</span>
+                    //$scope.filterService.dataTable = angular.copy($scope.filterService.originalDataTable);
+<span class="cstat-no" title="statement not covered" >                    var firstKeyNameOfParam = param[Object.keys(param)[0]] + "";</span>
+<span class="cstat-no" title="statement not covered" >                    var firstKeyNameOfParamWOS = firstKeyNameOfParam.replace(/ /g, "_");</span>
+<span class="cstat-no" title="statement not covered" >                    $scope.paramForRowExpand['geography'] = "'" + firstKeyNameOfParam + "'";</span>
+&nbsp;
+<span class="fstat-no" title="function not covered" >                    function dataToSubTable(data) {</span>
+<span class="cstat-no" title="statement not covered" >                        $scope.stopLoop = false;</span>
+<span class="cstat-no" title="statement not covered" >                        $scope.dataTable = _.each($scope.dataTable, <span class="fstat-no" title="function not covered" >function(item, index) {</span></span>
+<span class="cstat-no" title="statement not covered" >                            if ((param[columnDataHeaders[0]] == item[columnDataHeaders[0]]) &amp;&amp; !$scope.stopLoop) {</span>
+<span class="cstat-no" title="statement not covered" >                                $scope.dataTable[index]['childRows'] = data;</span>
+<span class="cstat-no" title="statement not covered" >                                $scope.stopLoop = true;</span>
+                            }
+                        });
+<span class="cstat-no" title="statement not covered" >                        $scope.originalDataTable = $scope.dataTable;</span>
+                    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                    if ($scope.filterService.clickedRowsArray1.indexOf(firstKeyNameOfParam) &lt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >                        $scope.loadingSym1 = true;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                        $scope.paramForRowExpand['totalSales'] = Number($scope.firstPer);</span>
+<span class="cstat-no" title="statement not covered" >                        $scope.paramForRowExpand['totalUnitQuantity'] = Number($scope.secondPer);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                        requestHandlers.requestAjaxService(config.assortmentCoverage.drillDownTable, $scope.paramForRowExpand).then(<span class="fstat-no" title="function not covered" >function(response) {</span></span>
+                            //requestHandlers.requestAjaxService(config.assortmentCoverage.drillDownTable).then(function(response) {
+<span class="cstat-no" title="statement not covered" >                            response = response.data;</span>
+<span class="cstat-no" title="statement not covered" >                            $scope.dowArrowFlag = false;</span>
+<span class="cstat-no" title="statement not covered" >                            $scope.filterService.clickedRowsArray1.push(firstKeyNameOfParam);</span>
+<span class="cstat-no" title="statement not covered" >                            var msgTable = response.records; </span>// response.data.body.split("\n");
+<span class="cstat-no" title="statement not covered" >                            columnDataHeaders = response.fields; </span>// msgTable[0].split("\t");
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                            $scope.subTableData = [];</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                            for (var i = 1; i &lt; response.numberOfRecords; i++) {</span>
+<span class="cstat-no" title="statement not covered" >                                var columnData = msgTable[i],</span>
+                                    tempObj = {};
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                                for (var j = 0; j &lt; columnData.length; j++) {</span>
+<span class="cstat-no" title="statement not covered" >                                    columnData[j] = (columnData[j] == ('null' || null)) ? '-' : columnData[j];</span>
+<span class="cstat-no" title="statement not covered" >                                    if (!isNaN(+(columnData[j]))) {</span>
+<span class="cstat-no" title="statement not covered" >                                        columnData[j] = Number(columnData[j]);</span>
+                                    }
+<span class="cstat-no" title="statement not covered" >                                    tempObj[columnDataHeaders[j]] = columnData[j];</span>
+                                }
+<span class="cstat-no" title="statement not covered" >                                $scope.subTableData.push(tempObj);</span>
+                            }
+<span class="cstat-no" title="statement not covered" >                            chartHandler.sortLogic($scope.subTableData, columnName, !sortDescending);</span>
+<span class="cstat-no" title="statement not covered" >                            $scope.filterService.childRowsData[firstKeyNameOfParamWOS] = $scope.subTableData;</span>
+<span class="cstat-no" title="statement not covered" >                            dataToSubTable($scope.subTableData);</span>
+<span class="cstat-no" title="statement not covered" >                            $scope.loadingSym1 = false;</span>
+<span class="cstat-no" title="statement not covered" >                            $rootScope.isExportButtonEnabled = false;</span>
+                        });
+                    } else {
+<span class="cstat-no" title="statement not covered" >                        $scope.dowArrowFlag = true;</span>
+<span class="cstat-no" title="statement not covered" >                        dataToSubTable([]);</span>
+<span class="cstat-no" title="statement not covered" >                        $scope.filterService.clickedRowsArray1[$scope.filterService.clickedRowsArray1.indexOf(firstKeyNameOfParam)] = "";</span>
+                    }
+                }
+            }
+<span class="cstat-no" title="statement not covered" >            $scope.closeErrorModal = <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >                $scope.errorModalWindow = false;</span>
+            }
+<span class="cstat-no" title="statement not covered" >            $scope.showAllCircles = <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >                jQuery('#assortments').find('circle.hideCircle').removeClass('hideCircle');</span>
+            }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            $scope.changeSorting = <span class="fstat-no" title="function not covered" >function(column) {</span></span>
+<span class="cstat-no" title="statement not covered" >                chartHandler.sortLogic($scope.dataTable, column, sortDescending);</span>
+<span class="cstat-no" title="statement not covered" >                var currentObj = {};</span>
+<span class="cstat-no" title="statement not covered" >                for (var i = 0; i &lt; $scope.dataTable.length; i++) {</span>
+<span class="cstat-no" title="statement not covered" >                    currentObj = $scope.dataTable[i];</span>
+<span class="cstat-no" title="statement not covered" >                    if (currentObj.hasOwnProperty('childRows')) {</span>
+<span class="cstat-no" title="statement not covered" >                        chartHandler.sortLogic($scope.dataTable[i].childRows, column, sortDescending);</span>
+                    }
+                }
+<span class="cstat-no" title="statement not covered" >                columnName = column;</span>
+<span class="cstat-no" title="statement not covered" >                sortDescending = !sortDescending;</span>
+            };
+        }
+    ]);
+})();</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Dec 20 2016 16:46:13 GMT+0530 (IST)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

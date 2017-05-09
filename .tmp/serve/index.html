@@ -1,0 +1,106 @@
+<!doctype html>
+<html ng-app="ABC">
+
+<head>
+    <meta charset="utf-8">
+    <title>ABC</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="../bower_components/angular-toastr/dist/angular-toastr.css" />
+    <link rel="stylesheet" href="../bower_components/nvd3/build/nv.d3.css" />
+    <link rel="stylesheet" href="../bower_components/angular-inform/dist/angular-inform.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css({.tmp/serve,src}) styles/app.css -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="app/index.css">
+    <!-- endinject -->
+    <!-- endbuild -->
+</head>
+
+<body ng-cloak>
+
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <header>
+    </header>
+    <div class="main-body">
+        <div inform class="inform-fixed inform-center inform-shadow inform-animate"></div>
+        <div ng-controller="TabController as tabController">
+            <nav class="menu-bar">
+                <div class="row viewContent">
+                    <div class="col-md-6">
+                        <ul class="nav nav-pills">
+                            <li role="presentation" ng-class="{active : $index + 1 == currentTab}" ng-repeat="tab in tabs">
+                                <a href="{{tab.link}}" ng-click="tabController.setCurrentTab(tab)" ng-bind="tab.desc"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="row viewContent main-body-content">
+                <div class="row btnContainer">
+                    <button class="buttonABC" ng-click="viewPersonDetails()"> View</button>
+                    <button class="buttonABC" ng-click="editPersonDetails()">Edit </button>    
+                </div>
+                <div class="col-md-12">
+                    <div ng-view></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- build:js(src) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/angular-route/angular-route.js"></script>
+    <script src="../bower_components/angular-toastr/dist/angular-toastr.tpls.js"></script>
+    <script src="../bower_components/d3/d3.js"></script>
+    <script src="../bower_components/nvd3/build/nv.d3.js"></script>
+    <script src="../bower_components/lodash/lodash.js"></script>
+    <script src="../bower_components/angular-inform/dist/angular-inform.js"></script>
+    <script src="../bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="../bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="../bower_components/underscore/underscore.js"></script>
+    <script src="../bower_components/crossfilter2/crossfilter.min.js"></script>
+    <script src="../bower_components/ng-crossfilter/dist/ng-crossfilter.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp/serve,.tmp/partials,src}) scripts/app.js -->
+    <!-- inject:js -->
+    <script src="app/scripts/app.js"></script>
+    <script src="app/scripts/services/requestHandlers.js"></script>
+    <script src="app/scripts/services/chartHandler.js"></script>
+    <script src="app/scripts/libraries/ui-bootstrap-tpls-1.3.2.js"></script>
+    <script src="app/scripts/libraries/topojson.js"></script>
+    <script src="app/scripts/libraries/select.js"></script>
+    <script src="app/scripts/libraries/rangeSlider.js"></script>
+    <script src="app/scripts/libraries/d3Tooltip.js"></script>
+    <script src="app/scripts/libraries/bootstrap.min.js"></script>
+    <script src="app/scripts/filters/filters.js"></script>
+    <script src="app/scripts/directives/directives.js"></script>
+    <script src="app/scripts/core/route.js"></script>
+    <script src="app/scripts/controllers/mainBController.js"></script>
+    <script src="app/scripts/controllers/mainAController.js"></script>
+    <script src="app/scripts/controllers/TabController.js"></script>
+    <script src="app/scripts/constants/config.js"></script>
+    <!-- endinject -->
+
+    <!-- inject:partials -->
+    <!-- angular templates will be automatically converted in js and inserted here -->
+    <!-- endinject -->
+    <!-- endbuild -->
+
+</body>
+
+</html>

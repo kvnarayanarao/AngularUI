@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for scripts/constants/config.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">scripts/constants/</a> config.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>2/2</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>1/1</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>2/2</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function() {
+    angular.module("ABC").constant('config', {
+&nbsp;
+        serverErrorMessage: "Some Error Occured in Getting Data from Server. Please Try Again.",
+        dev: {
+            serviceURL: 'oser403153.wal-mart.com:9288/geobrands/'
+        },
+        prod: {
+            serviceURL: 'oser401110.wal-mart.com:9737/geobrands/'
+        },
+        routing: {
+            assortmentCoverage: "app/templates/mainA.html",
+            brandProfile: "app/templates/mainB.html",
+        },
+        directives: {
+            filterBuyerscope: "app/templates/directives/filterBuyerscope.html",
+            filterBar: "app/templates/directives/filterBar.html",
+            ttElem: "app/templates/directives/dataTable.html"
+        },
+        filters: {
+&nbsp;
+            periodList: "periods",
+            filters: "filters",
+            dmaList: "dmas",
+            dmaMap: "dmaMap",
+            brands: "brands"
+        },
+        assortmentCoverage: {
+            pageName: "assortmentTab",
+            assortmentCurve: "assortmentChartDma",
+            assortmentWithNational: "assortmentChartNational",
+            topLevelTable: "assortmentDMATable",
+            drillDownTable: "assortmentBrandTable",
+            hideColumns: ['childRows', 'TM Sales', 'TM Sales YA', 'TM Units', 'TM Units YA', 'total_retail_price', 'tm_dollar', 'tm_dollar_ya', 'Performance_Mix_hidden']
+        },
+        brandProfile: {
+            pageName: "brandProfileTab",
+            dmaJSON: "app/data/dma.json",
+            usStatesJSON: "app/data/usStates.json",
+            bubbleChartService: "bubbleChart",
+            heatMapChartService: "heatMap",
+            topLevelTable: "brandTable",
+            drillDownTable: "brandDMATable",
+            brandUPCDrillDown: "brandUPCTable",
+            metricDefaultSelector: "sales",
+            hideColumns: ['childRows', 'TM Sales', 'TM Sales YA', 'TM Units', 'TM Units YA', 'sum_tm_dollar', 'sum_tm_dollar_ya', 'fair_share', 'Performance_Mix_hidden'],
+            brandMetrics: {
+                "totalMarketContribution": "Total Market Contribution",
+                "totalMarketValue": "Total Market Value",
+                "walmartContribution": "Walmart Contribution",
+                "walmartValue": "Walmart Value",
+                "rmSalesContribution":"RM Contribution",
+                "restOfTheMarketValue": "RM Value",
+                "contributionGap": "Contribution Gap (TM - WM)",         
+            }
+&nbsp;
+        },
+        buyerScope :{
+            executeQuery: "buyersScopeAnalysis"
+        },
+        chartHandler: {
+            colorCodes: ['#008B8B', '#B8860B', '#8A2BE2', '#00FFFF', '#CD5C5C', '#800000', '#7B68EE', '#808000', '#BC8F8F', '#56DF88']
+        },
+        usBubbleColumns: ["max_tm", "max_bp", "max_wp", "max_up", "max_tp", "max_tu", "max_tup", "max_tm_units", "max_cg_sales", "min_cg_sales", "max_cg_units", "min_cg_units","max_rp","max_rup"]
+&nbsp;
+&nbsp;
+    });
+})();</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Apr 04 2017 16:44:05 GMT+0530 (IST)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

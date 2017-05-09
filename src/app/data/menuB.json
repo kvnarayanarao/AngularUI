@@ -1,0 +1,66 @@
+{
+	"subMenu":["Main B - Sub1","Main B - Sub2","Main B - Sub3"],
+	"Main B - Sub1":[
+						{
+							"sectionName":"Person Details",
+							"name":"John1",
+							"email":"a@example.com",
+							"phone":"9999999999",
+							"desc":"this is John Details"
+						},
+						{
+							"sectionName":"Main - Container 2",
+							"displayText": "MainB - sub1 - content2"
+						},
+						{
+							"sectionName":"Main - Container 3",
+							"displayText": "MainB - sub1 - content3"
+						},
+						{
+							"sectionName":"Main - Container 4",
+							"displayText": "MainB - sub1 - content4"
+						}
+					],
+	"Main B - Sub2":[
+						{
+							"sectionName":"Person Details",
+							"name":"John2",
+							"email":"a@example.com",
+							"phone":"9999999999",
+							"desc":"this is John Details"
+						},
+						{
+							"sectionName":"Main - Container 2",
+							"displayText": "MainB - sub2 - content2"
+						},
+						{
+							"sectionName":"Main - Container 3",
+							"displayText": "MainB - sub2 - content3"
+						},
+						{
+							"sectionName":"Main - Container 4",
+							"displayText": "MainB - sub2 - content4"
+						}
+					],
+	"Main B - Sub3":[
+						{
+							"sectionName":"Person Details",
+							"name":"John3",
+							"email":"a@example.com",
+							"phone":"9999999999",
+							"desc":"this is John Details"
+						},
+						{
+							"sectionName":"Main - Container 2",
+							"displayText": "MainB - sub3 - content2"
+						},
+						{
+							"sectionName":"Main - Container 3",
+							"displayText": "MainB - sub3 - content3"
+						},
+						{
+							"sectionName":"Main - Container 4",
+							"displayText": "MainB - sub3 - content4"
+						}
+					]
+}

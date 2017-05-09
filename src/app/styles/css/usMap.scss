@@ -1,0 +1,94 @@
+.usMap .subunit {
+    cursor: pointer;
+    stroke: black;
+    stroke-width: 0.2px;
+}
+
+.usMap .subunit:hover {
+    opacity: 0.5;
+    fill: #ddc;
+    stroke: black;
+    stroke-width: 0.2px;
+}
+
+.usMap .state-boundary {
+    fill: none;
+    stroke: blue;
+    stroke-width: 0.8px;
+}
+
+.usMap .subunit-label {
+    display: none;
+    fill: #777;
+    fill-opacity: .5;
+    font-size: 8px;
+    font-weight: 300;
+    text-anchor: middle;
+}
+
+.usMap .place,
+.usMap .place-label {
+    fill: #444;
+}
+
+.usMap.brand .subunit {
+    cursor: auto;
+    stroke: black;
+    stroke-width: 0.2px;
+}
+
+.usMap.brand .subunit:hover {
+    opacity: 1;
+    fill: #ddc;
+    stroke: black;
+    stroke-width: 0.2px;
+}
+
+.usMap circle:hover {
+    opacity: 0.5;
+}
+
+.d3-tip {
+    line-height: 1;
+    font-weight: bold;
+    padding: 12px;
+    color: white;
+    border-radius: 2px;
+    z-index: 9999;
+}
+
+.d3-tip.assort-tip {
+    width: 30%;
+    background-color: rgba(240, 231, 231, 0.8);
+}
+
+
+/* Creates a small triangle extender for the tooltip */
+
+.d3-tip:after {
+    box-sizing: border-box;
+    display: inline;
+    font-size: 10px;
+    line-height: 1;
+    color: black;
+    content: "\25BC";
+    position: absolute;
+    text-align: center;
+}
+
+
+/* Style northward tooltips differently */
+
+.d3-tip.n:after {
+    margin: -1px 0 0 0;
+    top: 100%;
+    left: 0;
+}
+
+text.legendText {
+    font-size: 11px;
+}
+
+g.legendContainer {
+    width: 150px;
+}

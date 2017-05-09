@@ -1,0 +1,701 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for scripts/services/svgService.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">scripts/services/</a> svgService.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">4.86% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>7/144</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/66</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">5.26% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>1/19</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">4.86% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>7/144</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function() {
+angular.module("ABC").service("svgService", [<span class="fstat-no" title="function not covered" >function() {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    var doctype = '&lt;?xml version="1.0" standalone="no"?&gt;&lt;!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"&gt;';</span>
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function isExternal(url) {</span>
+<span class="cstat-no" title="statement not covered" >        return url &amp;&amp; url.lastIndexOf('http', 0) == 0 &amp;&amp; url.lastIndexOf(window.location.host) == -1;</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function inlineImages(el, callback) {</span>
+<span class="cstat-no" title="statement not covered" >        var images = el.querySelectorAll('image');</span>
+<span class="cstat-no" title="statement not covered" >        var left = images.length;</span>
+<span class="cstat-no" title="statement not covered" >        if (left == 0) {</span>
+<span class="cstat-no" title="statement not covered" >            callback();</span>
+        }
+<span class="cstat-no" title="statement not covered" >        for (var i = 0; i &lt; images.length; i++) {</span>
+<span class="cstat-no" title="statement not covered" >            (<span class="fstat-no" title="function not covered" >function(image) {</span></span>
+<span class="cstat-no" title="statement not covered" >                var href = image.getAttributeNS("http://www.w3.org/1999/xlink", "href");</span>
+<span class="cstat-no" title="statement not covered" >                if (href) {</span>
+<span class="cstat-no" title="statement not covered" >                    if (isExternal(href.value)) {</span>
+<span class="cstat-no" title="statement not covered" >                        console.warn("Cannot render embedded images linking to external hosts: " + href.value);</span>
+<span class="cstat-no" title="statement not covered" >                        return;</span>
+                    }
+                }
+<span class="cstat-no" title="statement not covered" >                var canvas = document.createElement('canvas');</span>
+<span class="cstat-no" title="statement not covered" >                var ctx = canvas.getContext('2d');</span>
+<span class="cstat-no" title="statement not covered" >                var img = new Image();</span>
+<span class="cstat-no" title="statement not covered" >                href = href || image.getAttribute('href');</span>
+<span class="cstat-no" title="statement not covered" >                img.src = href;</span>
+<span class="cstat-no" title="statement not covered" >                img.onload = <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >                    canvas.width = img.width;</span>
+<span class="cstat-no" title="statement not covered" >                    canvas.height = img.height;</span>
+<span class="cstat-no" title="statement not covered" >                    ctx.drawImage(img, 0, 0);</span>
+<span class="cstat-no" title="statement not covered" >                    image.setAttributeNS("http://www.w3.org/1999/xlink", "href", canvas.toDataURL('image/png'));</span>
+<span class="cstat-no" title="statement not covered" >                    left--;</span>
+<span class="cstat-no" title="statement not covered" >                    if (left == 0) {</span>
+<span class="cstat-no" title="statement not covered" >                        callback();</span>
+                    }
+                }
+<span class="cstat-no" title="statement not covered" >                img.onerror = <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >                    console.log("Could not load " + href);</span>
+<span class="cstat-no" title="statement not covered" >                    left--;</span>
+<span class="cstat-no" title="statement not covered" >                    if (left == 0) {</span>
+<span class="cstat-no" title="statement not covered" >                        callback();</span>
+                    }
+                }
+            })(images[i]);
+        }
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function styles(el, selectorRemap) {</span>
+<span class="cstat-no" title="statement not covered" >        var css = "";</span>
+<span class="cstat-no" title="statement not covered" >        var sheets = document.styleSheets;</span>
+<span class="cstat-no" title="statement not covered" >        for (var i = 0; i &lt; sheets.length; i++) {</span>
+<span class="cstat-no" title="statement not covered" >            try {</span>
+<span class="cstat-no" title="statement not covered" >                var rules = sheets[i].cssRules;</span>
+            } catch (e) {
+<span class="cstat-no" title="statement not covered" >                console.warn("Stylesheet could not be loaded: " + sheets[i].href);</span>
+<span class="cstat-no" title="statement not covered" >                continue;</span>
+            }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            if (rules != null) {</span>
+<span class="cstat-no" title="statement not covered" >                for (var j = 0; j &lt; rules.length; j++) {</span>
+<span class="cstat-no" title="statement not covered" >                    var rule = rules[j];</span>
+<span class="cstat-no" title="statement not covered" >                    if (typeof(rule.style) != "undefined") {</span>
+<span class="cstat-no" title="statement not covered" >                        var match = null;</span>
+<span class="cstat-no" title="statement not covered" >                        try {</span>
+<span class="cstat-no" title="statement not covered" >                            match = el.querySelector(rule.selectorText);</span>
+                        } catch (err) {
+<span class="cstat-no" title="statement not covered" >                            console.warn('Invalid CSS selector "' + rule.selectorText + '"', err);</span>
+                        }
+<span class="cstat-no" title="statement not covered" >                        if (match) {</span>
+<span class="cstat-no" title="statement not covered" >                            var selector = selectorRemap ? selectorRemap(rule.selectorText) : rule.selectorText;</span>
+<span class="cstat-no" title="statement not covered" >                            css += selector + " { " + rule.style.cssText + " }\n";</span>
+                        } else <span class="cstat-no" title="statement not covered" >if (rule.cssText.match(/^@font-face/)) {</span>
+<span class="cstat-no" title="statement not covered" >                            css += rule.cssText + '\n';</span>
+                        }
+                    }
+                }
+            }
+        }
+<span class="cstat-no" title="statement not covered" >        return css;</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function getDimension(el, clone, dim) {</span>
+<span class="cstat-no" title="statement not covered" >        var v = (el.viewBox.baseVal &amp;&amp; el.viewBox.baseVal[dim]) ||</span>
+            (clone.getAttribute(dim) !== null &amp;&amp; !clone.getAttribute(dim).match(/%$/) &amp;&amp; parseInt(clone.getAttribute(dim))) ||
+            el.getBoundingClientRect()[dim] ||
+            parseInt(clone.style[dim]) ||
+            parseInt(window.getComputedStyle(el).getPropertyValue(dim));
+<span class="cstat-no" title="statement not covered" >        return (typeof v === 'undefined' || v === null || isNaN(parseFloat(v))) ? 0 : v;</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function reEncode(data) {</span>
+<span class="cstat-no" title="statement not covered" >        data = encodeURIComponent(data);</span>
+<span class="cstat-no" title="statement not covered" >        data = data.replace(/%([0-9A-F]{2})/g, <span class="fstat-no" title="function not covered" >function(match, p1) {</span></span>
+<span class="cstat-no" title="statement not covered" >            var c = String.fromCharCode('0x' + p1);</span>
+<span class="cstat-no" title="statement not covered" >            return c === '%' ? '%25' : c;</span>
+        });
+<span class="cstat-no" title="statement not covered" >        return decodeURIComponent(data);</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    this.svgAsDataUri = <span class="fstat-no" title="function not covered" >function(el, options, cb) {</span></span>
+<span class="cstat-no" title="statement not covered" >        options = options || {};</span>
+<span class="cstat-no" title="statement not covered" >        options.scale = options.scale || 1;</span>
+<span class="cstat-no" title="statement not covered" >        var xmlns = "http://www.w3.org/2000/xmlns/";</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        inlineImages(el, <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >            var outer = document.createElement("div");</span>
+<span class="cstat-no" title="statement not covered" >            var clone = el.cloneNode(true);</span>
+<span class="cstat-no" title="statement not covered" >            var width, height;</span>
+<span class="cstat-no" title="statement not covered" >            if (el.tagName == 'svg') {</span>
+<span class="cstat-no" title="statement not covered" >                width = options.width || getDimension(el, clone, 'width');</span>
+<span class="cstat-no" title="statement not covered" >                height = options.height || getDimension(el, clone, 'height');</span>
+            } else <span class="cstat-no" title="statement not covered" >if (el.getBBox) {</span>
+<span class="cstat-no" title="statement not covered" >                var box = el.getBBox();</span>
+<span class="cstat-no" title="statement not covered" >                width = box.x + box.width;</span>
+<span class="cstat-no" title="statement not covered" >                height = box.y + box.height;</span>
+<span class="cstat-no" title="statement not covered" >                clone.setAttribute('transform', clone.getAttribute('transform').replace(/translate\(.*?\)/, ''));</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                var svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg')</span>
+<span class="cstat-no" title="statement not covered" >                svg.appendChild(clone)</span>
+<span class="cstat-no" title="statement not covered" >                clone = svg;</span>
+            } else {
+<span class="cstat-no" title="statement not covered" >                console.error('Attempted to render non-SVG element', el);</span>
+<span class="cstat-no" title="statement not covered" >                return;</span>
+            }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            clone.setAttribute("version", "1.1");</span>
+<span class="cstat-no" title="statement not covered" >            clone.setAttributeNS(xmlns, "xmlns", "http://www.w3.org/2000/svg");</span>
+<span class="cstat-no" title="statement not covered" >            clone.setAttributeNS(xmlns, "xmlns:xlink", "http://www.w3.org/1999/xlink");</span>
+<span class="cstat-no" title="statement not covered" >            clone.setAttribute("width", width * options.scale);</span>
+<span class="cstat-no" title="statement not covered" >            clone.setAttribute("height", height * options.scale);</span>
+<span class="cstat-no" title="statement not covered" >            clone.setAttribute("viewBox", [</span>
+                options.left || 0,
+                options.top || 0,
+                width,
+                height
+            ].join(" "));
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            outer.appendChild(clone);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            var css = styles(el, options.selectorRemap);</span>
+<span class="cstat-no" title="statement not covered" >            var s = document.createElement('style');</span>
+<span class="cstat-no" title="statement not covered" >            s.setAttribute('type', 'text/css');</span>
+<span class="cstat-no" title="statement not covered" >            s.innerHTML = "&lt;![CDATA[\n" + css + "\n]]&gt;";</span>
+<span class="cstat-no" title="statement not covered" >            var defs = document.createElement('defs');</span>
+<span class="cstat-no" title="statement not covered" >            defs.appendChild(s);</span>
+<span class="cstat-no" title="statement not covered" >            clone.insertBefore(defs, clone.firstChild);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            var svg = doctype + outer.innerHTML;</span>
+<span class="cstat-no" title="statement not covered" >            var uri = 'data:image/svg+xml;base64,' + window.btoa(reEncode(svg));</span>
+<span class="cstat-no" title="statement not covered" >            if (cb) {</span>
+<span class="cstat-no" title="statement not covered" >                cb(uri);</span>
+            }
+        });
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    this.svgAsPngUri = <span class="fstat-no" title="function not covered" >function(el, options, cb) {</span></span>
+<span class="cstat-no" title="statement not covered" >        this.svgAsDataUri(el, options, <span class="fstat-no" title="function not covered" >function(uri) {</span></span>
+<span class="cstat-no" title="statement not covered" >            var image = new Image();</span>
+<span class="cstat-no" title="statement not covered" >            image.onload = <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >                var canvas = document.createElement('canvas');</span>
+<span class="cstat-no" title="statement not covered" >                canvas.width = image.width;</span>
+<span class="cstat-no" title="statement not covered" >                canvas.height = image.height;</span>
+<span class="cstat-no" title="statement not covered" >                var context = canvas.getContext('2d');</span>
+<span class="cstat-no" title="statement not covered" >                if (options &amp;&amp; options.backgroundColor) {</span>
+<span class="cstat-no" title="statement not covered" >                    context.fillStyle = options.backgroundColor;</span>
+<span class="cstat-no" title="statement not covered" >                    context.fillRect(0, 0, canvas.width, canvas.height); </span>
+                }
+<span class="cstat-no" title="statement not covered" >                context.font = "20px Helvetica Neue, Helvetica, Arial, sans-serif";</span>
+<span class="cstat-no" title="statement not covered" >                context.fillStyle = '#000';</span>
+<span class="cstat-no" title="statement not covered" >                var pathText = jQuery("div.col-md-9").find('label.categoryLable').text();</span>
+<span class="cstat-no" title="statement not covered" >                context.fillText(pathText, 40, 40);</span>
+<span class="cstat-no" title="statement not covered" >                var pathTitle = jQuery("div.col-md-9 h1").filter(':not(".ng-hide")').text();</span>
+<span class="cstat-no" title="statement not covered" >                context.fillStyle = '#000';</span>
+<span class="cstat-no" title="statement not covered" >                context.font = "40px Helvetica Neue, Helvetica, Arial, sans-serif";</span>
+<span class="cstat-no" title="statement not covered" >                context.fillText(pathTitle, 40, 95);</span>
+<span class="cstat-no" title="statement not covered" >                context.drawImage(image, 0, 50);</span>
+<span class="cstat-no" title="statement not covered" >                var a = document.createElement('a'),</span>
+                    png;
+<span class="cstat-no" title="statement not covered" >                try {</span>
+<span class="cstat-no" title="statement not covered" >                    png = canvas.toDataURL('image/png');</span>
+                } catch (e) {
+<span class="cstat-no" title="statement not covered" >                    if (e instanceof SecurityError) {</span>
+<span class="cstat-no" title="statement not covered" >                        console.error("Rendered SVG images cannot be downloaded in this browser.");</span>
+<span class="cstat-no" title="statement not covered" >                        return;</span>
+                    } else {
+<span class="cstat-no" title="statement not covered" >                        throw e;</span>
+                    }
+                }
+<span class="cstat-no" title="statement not covered" >                cb(png);</span>
+            }
+<span class="cstat-no" title="statement not covered" >            image.src = uri;</span>
+        });
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    this.saveSvgAsPng = <span class="fstat-no" title="function not covered" >function(el, name, options) {</span></span>
+<span class="cstat-no" title="statement not covered" >        options = options || {};</span>
+<span class="cstat-no" title="statement not covered" >        this.svgAsPngUri(el, options, <span class="fstat-no" title="function not covered" >function(uri) {</span></span>
+<span class="cstat-no" title="statement not covered" >            var a = document.createElement('a');</span>
+<span class="cstat-no" title="statement not covered" >            a.download = name;</span>
+<span class="cstat-no" title="statement not covered" >            a.href = uri;</span>
+<span class="cstat-no" title="statement not covered" >            document.body.appendChild(a);</span>
+<span class="cstat-no" title="statement not covered" >            a.addEventListener("click", <span class="fstat-no" title="function not covered" >function(e) {</span></span>
+<span class="cstat-no" title="statement not covered" >                a.parentNode.removeChild(a);</span>
+            });
+<span class="cstat-no" title="statement not covered" >            a.click();</span>
+        });
+    }
+}])
+&nbsp;
+})();</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Apr 04 2017 16:44:05 GMT+0530 (IST)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

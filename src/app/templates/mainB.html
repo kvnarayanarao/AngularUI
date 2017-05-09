@@ -1,0 +1,44 @@
+<div class="row viewContent">
+    <div class="col-md-3">
+    <left-sub-nav></left-sub-nav>
+  </div>
+  <div class="col-md-6">
+    <div class="panel panel-default">
+        <div ng-repeat = "currentData in centerData" class="col-md-6">
+          <div class="subContainer">
+            <div class="centerHead">{{currentData.sectionName}}  
+            <span class="saveBtn" ng-if="!viewFlag && (currentData.sectionName =='Person Details')" ng-click="savePersonalDetails()"> save </span></div> 
+            <div class="centerContent">
+              <ul ng-if="currentData.sectionName =='Person Details'">
+                <li>Name: <span ng-if="viewFlag">{{currentData.name}}</span> 
+                          <input type="text" ng-model="currentData.name" ng-if="!viewFlag"> </input>
+                </li>
+                
+                <li>Email: <span ng-if="viewFlag">{{currentData.email}}</span>  
+                           <input type="text" ng-model="currentData.email" ng-if="!viewFlag"> </input>
+                </li>
+                
+                <li>Phone: <span ng-if="viewFlag">{{currentData.phone}}</span>  
+                           <input type="text" ng-model="currentData.phone" ng-if="!viewFlag"> </input>
+                </li>
+                
+                <li>Description: <span ng-if="viewFlag">{{currentData.desc}}</span>  
+                                 <input type="text" ng-model="currentData.desc" ng-if="!viewFlag"> </input>
+                </li> 
+
+              </ul>
+              <ul ng-if="currentData.sectionName !='Person Details'">
+                <li>display Text</li>
+                <li>{{currentData.displayText}}</li>
+              </ul>              
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>  
+  
+  <div class="col-md-3">
+    <filter-bar></filter-bar>
+  </div>
+
+</div>

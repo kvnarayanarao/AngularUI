@@ -1,0 +1,268 @@
+body,
+html {
+    font-family: 'Roboto', 'Arial', 'Helvetica', 'sans-serif';
+}
+
+.main-body {
+    clear: both;
+    overflow-x: hidden;
+    background-color: #f2f8fd;
+    color: #282828;
+}
+
+.blockItem {
+    width: 100%;
+    visibility: none;
+}
+
+.logo {
+    float: left;
+    width: 36px;
+    height: 36px;
+    margin: 8px;
+    background-size: contain;
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+
+.viewContent {
+    padding: 0 1rem;
+    min-height:500px;
+}
+
+.nav.nav-pills>li.active {
+    background-color: rgba(255, 255, 255, 0.10);
+}
+
+.nav.nav-pills li a {
+    padding: 0 15px;
+}
+
+.nav.nav-pills li:first-child>a {
+    padding-left: 15px;
+}
+
+.panel,
+.panel-default {
+    border: 0;
+    border-color: white;
+}
+
+.nav.nav-pills>li.active>a {
+    color: #ffc220;
+}
+
+.nav.nav-pills>li>a {
+    color: #ffffff;
+    text-align: center;
+    padding: 15px 30px;
+}
+
+.nav-pills>li.active>a,
+.nav-pills>li.active>a:focus,
+.nav-pills>li.active>a:hover {
+    background-color: transparent;
+}
+
+.nav-pills>li>a:focus,
+.nav-pills>li>a:hover {
+    color: #fecd59;
+    background-color: transparent;
+}
+
+.buttonABC {
+    background-color: #76c043;
+    font-size: 12px;
+    border: 0;
+    border-radius: 2px;
+    color: white;
+    margin: 0;
+    padding: 8px;
+    height: 30px;
+    min-width: 65px;
+    margin-left:20px;
+    margin-right:20px;
+}
+
+.buttonABC:hover {
+    background-color: #86c45c!important;
+    color: white;
+}
+
+.buttonABC:focus {
+    background-color: #86c45c;
+    color: white;
+}
+
+.buttonABC:active {
+    background-color: #367c2b!important;
+    color: white!important;
+}
+
+i.fa.fa-camera,
+i.fa.fa-download {
+    padding-right: 8px;
+}
+
+.action {
+    margin-bottom: 0;
+    margin-right: 1.5rem;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+
+ul.nav.nav-tabs {
+    background-color: #F2F2F2 !important;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+ul.nav.nav-tabs li {
+    width: 9%;
+    cursor: pointer;
+}
+
+.nav-tabs>li>a {
+    text-align: center;
+    font-size: 10px;
+    min-height: 70px;
+    padding: 5px 10px;
+}
+
+div.ngrs-value.ngrs-value-min div {
+    top: -52px;
+    position: relative;
+}
+.panel {
+    border-radius: 0;
+}
+
+.panel.panel-default {
+min-height:500px;
+    position: relative;
+    // padding-top: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .2);
+}
+
+.panel.panel-default.dataTableData {
+    // min-height: 375px;
+    height: 100%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.col-md-3 .panel.panel-default {
+    padding-top: 0;
+}
+
+.panel.panel-default.onloadAssortDiv,
+.panel.panel-default.onloadBrandDiv {
+    padding-top: 25%;
+}
+
+ul.nav li a {
+    border-radius: 0;
+}
+
+.panel-body {
+    padding: 0;
+}
+
+
+
+.menu-bar {
+    background-color: #004c91;
+    height: 50px;
+    padding-right: 12px;
+    padding-left: 12px;
+}
+
+
+
+/* border radius for radio*/
+
+input[type="radio"] {
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+}
+
+
+.col-md-3 , .col-md-6, {
+    padding-left:0;
+    padding-right:0;
+} 
+.btnContainer{
+    margin: 3px 10px;
+}
+ul.subleftPanels{
+    list-style: none;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0;
+    padding: 35px;
+    border: 1px solid black;
+    border-radius: 40px;
+    min-height: 400px;
+   
+   li{
+        height: 50px;
+        border: 1px solid black;
+        border-radius: 8px;
+        margin-top: 15px;
+        cursor: pointer;
+    }
+ 
+}
+.subContainer{
+    margin:20px 10px;
+    border:1px solid black;
+    height:170px;
+    border-radius:3px;
+
+    .centerHead{
+        height:40px;
+        border-bottom:1px solid black;
+        width:100%;
+        padding-left:15px;
+    }
+    .centerContent{
+         padding-left:15px;
+
+         ul{
+         list-style:none;
+         padding-left:0;
+
+            li{
+            height:30px;
+            }
+         }
+    }
+}
+.saveBtn{
+    float: right;
+    margin-right: 10px;
+    text-decoration: underline;
+    color: blue;
+    cursor: pointer;
+    padding-top: 3px;
+}
+
+.filterBar1{
+    div{
+    text-align: center;
+    }
+}

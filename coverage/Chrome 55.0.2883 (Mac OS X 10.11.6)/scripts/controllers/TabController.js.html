@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for scripts/controllers/TabController.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">scripts/controllers/</a> TabController.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">6.25% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>2/32</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/6</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">14.29% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>1/7</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">6.25% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>2/32</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"> (function() {
+     'use strict';
+&nbsp;
+     angular.module("ABC").controller("TabController", ['$scope', '$rootScope', 'chartHandlerService', '$route', '$routeParams', 'filterService',
+<span class="fstat-no" title="function not covered" >         function($scope, $rootScope, chartHandlerService, $route, $routeParams, filterService) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >             $rootScope.serverError = false;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >             $scope.tabs = [{</span>
+                 id: 1,
+                 desc: "Assortment Coverage",
+                 link: "#/assortmentCoverage"
+             }, {
+                 id: 2,
+                 desc: "Brand Profile",
+                 link: "#/brandProfile"
+             }, {
+                 id: 3,
+                 desc: "Buyer Scope",
+                 link: "#/buyerScope"
+             }];
+&nbsp;
+<span class="cstat-no" title="statement not covered" >             $scope.currentTab = 1;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >             $scope.$on("$routeChangeSuccess", <span class="fstat-no" title="function not covered" >function(event, next, current) {</span></span>
+<span class="cstat-no" title="statement not covered" >                 switch (next.originalPath) {</span>
+                     case "/assortmentCoverage":
+<span class="cstat-no" title="statement not covered" >                         $scope.currentTab = 1;</span>
+<span class="cstat-no" title="statement not covered" >                         break;</span>
+                     case "/brandProfile":
+<span class="cstat-no" title="statement not covered" >                         $scope.currentTab = 2;</span>
+<span class="cstat-no" title="statement not covered" >                         break;</span>
+                     case "/buyerScope":
+<span class="cstat-no" title="statement not covered" >                         $scope.currentTab = 3;</span>
+<span class="cstat-no" title="statement not covered" >                         break;</span>
+                     default:
+<span class="cstat-no" title="statement not covered" >                         $scope.currentTab = 1;</span>
+<span class="cstat-no" title="statement not covered" >                         break;</span>
+                 };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                 $rootScope.isSnapShotEnabled = true;</span>
+<span class="cstat-no" title="statement not covered" >                 $rootScope.isExportButtonEnabled = true;</span>
+             });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >             this.alertClose = <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >                 $rootScope.serverError = false;</span>
+             }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >             this.setCurrentTab = <span class="fstat-no" title="function not covered" >function(currentTab) {</span></span>
+<span class="cstat-no" title="statement not covered" >                 $scope.currentTab = currentTab.id;</span>
+<span class="cstat-no" title="statement not covered" >                 var svg = d3.select("svg");</span>
+<span class="cstat-no" title="statement not covered" >                 svg.selectAll("*").remove();</span>
+<span class="cstat-no" title="statement not covered" >                 jQuery("div.col-md-9 h1").html('');</span>
+<span class="cstat-no" title="statement not covered" >                 filterService.showCategoryLbl = "";</span>
+<span class="cstat-no" title="statement not covered" >                 if (filterService.hasOwnProperty('mdlPeriod')) {</span>
+<span class="cstat-no" title="statement not covered" >                     delete filterService['mdlPeriod'];</span>
+                 }
+<span class="cstat-no" title="statement not covered" >                 jQuery('.d3-tip').hide();</span>
+             };
+&nbsp;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >             this.takeSnapshot = <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >                 chartHandlerService.takeSnapshot(document.getElementsByTagName("svg"));</span>
+             };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >             this.exportToCSV = <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >                 chartHandlerService.exportToCSV();</span>
+             };
+&nbsp;
+         }
+     ]);
+ })();</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Dec 20 2016 16:46:13 GMT+0530 (IST)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>
